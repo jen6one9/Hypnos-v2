@@ -1,0 +1,85 @@
+<head>
+  <meta charset="UTF-8">
+  <title>Hypnos|Results</title>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="./stylesheets/style.css">
+  <!-- link for chart.js -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css"
+    integrity="sha512-/zs32ZEJh+/EO2N1b0PEdoA10JkdC3zJ8L5FTiQu82LR9S/rOQNfQN7U59U9BC12swNeRAz3HSzIL2vpp4fv3w=="
+    crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  <!-- icons link for materialize -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- font link for google fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Righteous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Corgette"> ​
+</head>
+
+<body>
+  <nav class="navBar" role="navigation">
+    <div class="nav-wrapper container">
+
+      <a id="logo-container" href="/" class="brand-logo"> Hypnos</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="/team">Team</a></li>
+      </ul>
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="/team">Team</a></li>
+      </ul>
+
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
+
+    </div>
+
+  </nav>
+
+  <div class="w3-container"
+    style="background-image: url(./public/images/Emerald-Bay-sunset-by-Levi-Bare.jpg);background-size: cover;">
+    <div>
+      <div class="chart-container" style="position: relative;">
+        <div class="row">
+          <div class="col s12" style="background-color: rgba(0, 128, 0, 0.116);">
+            <h5 style="text-align: center; color:white; font-family:Corgette">Sleep Tracker results</h5>
+          </div>
+          <div class="col s12 m4 l2" style="background-color: slategray;">
+            <img src="{{user.picture}}" alt="user photo">
+            <p class="flow-text" style="font-family: Righteous; color: white">{{user.displayName}}</p>
+          </div>
+          <div class="col s12 m4 l8" style="background-color: rgba(112, 128, 144, 0.603)">
+            <canvas id="lineChart" height="1" width="3"></canvas>
+          </div>
+          <div class="col s12 m4 l2" style="background-color: rgba(94, 94, 255, 0.363);">
+            <p class="flow-text" style="color:rgb(231, 231, 231);font-size:large">The Graph to the left shows the amount
+              of sleeping(red) compared to the recommended sleep you should be getting (blue)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12 m4 18">
+        <div class="card grey darken-1">
+          <div class="card-content white-text">
+            <span class="card-title">Tips for better sleep</span>
+            <p>Follow the link to our recommendations page to help get your Sleep back on Track</p>
+          </div>
+          <div class="card-action">
+            <a href="./recommendations.html">Recommendations Page</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <a class="color" href="./team.html">Made by Team Hypnos</a>
+      <br><a class="color" href="http://materializecss.com">Framework by Materialize</a>
+    </div>
+  </footer>
+
+  <script src="public/javascript/results.js"></script>
+
+
+</body>
