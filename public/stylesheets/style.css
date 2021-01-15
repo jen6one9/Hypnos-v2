@@ -1,6 +1,6 @@
 /* auth CSS */
 
-.w3-container a {
+/* .w3-container a {
     color: #337ab7;
     text-decoration: none;
 }
@@ -17,7 +17,13 @@ pre {
 
 .w3-card-4 {
     padding: 15px;
+} */
+
+form.signup,
+form.login {
+  margin-top: 50px;
 }
+
 
 
 /******************************/
