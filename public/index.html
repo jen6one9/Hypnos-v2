@@ -4,21 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Project Hypnos</title>
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="/stylesheets/style.css">
-     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
- 
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    <!--<link rel= "stylesheet" href= "../public/stylesheets/materialize.css">-->
+    <!-- icons link for materialize -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- font link for google fonts 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bangers">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">-->
 </head>
 
 <div>
     <nav class="navBar" role="navigation">
         <div class="nav-wrapper container">
             <a id="logo-container" href="/" class="brand-logo"> Hypnos</a>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="/team">Team</a></li>
+            <ul class="right hide-on-med-and-down"> 
+                <li><a href="./team.html">Team</a></li>
+                <li class="navbar-brand" href="/logout"><a>
+                    Logout</a>
+                  </li>
             </ul>
             <ul id="nav-mobile" class="sidenav">
-                <li><a href="/team">Team</a></li>
+                <li><a href="./team.html">Team</a></li>
             </ul>
 
             <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
@@ -37,7 +45,7 @@
                 </div>
 
                 <div class="row center">
-                    <a href="onBoard.html" class="btn-large">Get Started</a>
+                    <a href="/login" class="btn-large">Get Started</a>
                     <!-- Add onBoard html-->
 
 
@@ -102,7 +110,8 @@
 
 <footer>
     <div class="container">
-        <a class="color" href="http://materializecss.com">Copyright &copy; 2020</a>
+         <a class="color" href="./team.html">Made by Team Hypnos</a>
+         <br><a class="color" href="http://materializecss.com">Framework by Materialize</a>
     </div>
 </footer>
 

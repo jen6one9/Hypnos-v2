@@ -2,22 +2,22 @@
   "development": {
     "username": "root",
     "password": "root",
-    "database": "hypnos_dev_db",
+    "database": "passport_demo",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
     "password": "root",
-    "database": "hypnos_db",
+    "database": "database_test",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
-    "username": "b2a1bd419d8dd0",
-    "password": "c24b947b",
-    "database": "heroku_1878060b6494e90",
-    "host": "us-cdbr-east-02.cleardb.com",
+    "username": "root",
+    "password": "root",
+    "database": "database_production",
+    "host": "127.0.0.1",
     "dialect": "mysql"
   }
 }
