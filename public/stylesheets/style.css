@@ -193,6 +193,7 @@ nav ul a {
     height: auto;
     color: rgba(255, 255, 255, .9);
     position: relative;
+    width: relative;
     overflow: hidden;
     height: 700px;
     background: url("https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80");
