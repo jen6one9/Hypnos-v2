@@ -1,63 +1,55 @@
 <!DOCTYPE html>
 <html>
-​
 
 <head>
     <meta charset="UTF-8">
-    <title>Hypnos | Recommendations Page</title>
+    <title>Project Hypnos</title>
+    <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="./stylesheets/style.css">
     <!--<link rel= "stylesheet" href= "../public/stylesheets/materialize.css">-->
     <!-- icons link for materialize -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    ​
+    <!-- font link for google fonts 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bangers">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">-->
 </head>
 
+<style>
+    body {
+        background-image: url('https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
 
-<body>
-    <style>
-        body {
-            background-image: url('https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
+    nav {
 
-        nav {
-        
-            top: -1px;
-            color: black;
-            z-index: 1;
-        }
-    </style>
-    ​
+        top: -1px;
+        color: black;
+        z-index: 1;
+    }
+</style>
+
+<div>
     <nav class="navBar" role="navigation">
         <div class="nav-wrapper container">
-
             <a id="logo-container" href="/" class="brand-logo"> Hypnos</a>
             <ul class="right hide-on-med-and-down">
-                <li><a href="/team">Team</a></li>
+                <li><a href="./team.html">Team</a></li>
+                <li class="navbar-brand" href="/logout"><a>
+                        Logout</a>
+                </li>
             </ul>
             <ul id="nav-mobile" class="sidenav">
-                <li><a href="/team">Team</a></li>
+                <li><a href="./team.html">Team</a></li>
             </ul>
 
             <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
-
         </div>
 
     </nav>
-
-
-    <ul class="sidenav" id="mobile-demo">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="results.html">Results</a></li>
-        <li><a href="recommendations.html">Recommendations</a></li>
-        <li><a href="team.html">Team</a></li>
-    </ul>
-
 
 
     <div class="container">
@@ -282,13 +274,18 @@
             </div>
         </div>
 
-      ​​
-      <footer>
-        <div class="container">
-             <a class="color" href="./team.html">Made by Team Hypnos</a>
-             <br><a class="color" href="http://materializecss.com">Framework by Materialize</a>
-        </div>
-    </footer>
+
+        <!-- <footer>
+    <div class="container">
+         <a class="color" href="./team.html">Made by Team Hypnos</a>
+         <br><a class="color" href="http://materializecss.com">Framework by Materialize</a>
+    </div>
+</footer> -->
+
+
+
+
+
 
 
         <!--JavaScript at end of body for optimized loading-->
@@ -302,7 +299,7 @@
 
 
         </script>
-</body>
-​
+        </body>
+        ​
 
 </html>
