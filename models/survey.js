@@ -1,6 +1,15 @@
+//creates table for survey questions if it doesnt already exist and columns for each question.
 
+module.exports = function(sequelize, Datatypes) {
+    var Survey = sequelize.define("Survey", {
+        //Database fill for survey form
+        TimeToBed: {
+            type: Datatypes.INTEGER,
+        }
 
-
+    })
+    return Survey;
+}
 
 
 
