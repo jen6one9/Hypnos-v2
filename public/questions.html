@@ -46,38 +46,37 @@
                 </ul>
 
                 <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        </div>
+        
+    </nav>
 
-            </div>
+    <section>
+        <div class="container">
+            <div class="row">
+            {{#unless user.age}}
+                <div class="col-md-7 main-section" id="link-box" >
+                   
+                    <form class="ageForm">
+                    <h5>Please select the range of your age</h5>
+                        <p><label>
+                            <input class="with-gap age" name="age" type="radio" value="9"/>
+                            <span>14 - 17 years</span>
+                        </label></p>
+                        <p><label>
+                              <input class="with-gap age" name="age" type="radio" value="8"/>
+                              <span>18 - 25 years</span>
+                        </label></p>
+                        <p><label>
+                            <input class="with-gap btn age" name="age" type="radio" value="7"/>
+                            <span>26 - 64 years</span>
+                      </label></p>
+                      <p><label>
+                        <input class="with-gap btn age" name="age" type="radio" value="6"/>
+                        <span>> 65 years</span>
+                     </label></p>
+                    <br>                 
 
-        </nav>
-
-        <section>
-            <div class="container">
-                <div class="row">
-                    {{#unless user.age}}
-                    <div class="col-md-7 main-section" id="link-box">
-
-                        <form class="ageForm">
-                            <h5>Please select your age group.</h5>
-                            <p><label>
-                                    <input class="with-gap age" name="age" type="radio" value="14 - 17 years" />
-                                    <span>Teen (14 - 17 years) </span>
-                                </label></p>
-                            <p><label>
-                                    <input class="with-gap age" name="age" type="radio" value="18 - 25 years" />
-                                    <span>Young Adult (18 - 25 years)</span>
-                                </label></p>
-                            <p><label>
-                                    <input class="with-gap btn age" name="age" type="radio" value="26 - 64 years" />
-                                    <span>Adult (26 - 64 years)</span>
-                                </label></p>
-                            <p><label>
-                                    <input class="with-gap btn age" name="age" type="radio" value="> 65 years" />
-                                    <span>Senior (65 years+)</span>
-                                </label></p>
-                            <br>
-
-                            <div class="row center">
+                        <div class="row center">
                             <button class="btn" type="submit">Submit</button>
                         </div>
                         </form>
