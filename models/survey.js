@@ -4,7 +4,13 @@ module.exports = function(sequelize, Datatypes) {
     var Survey = sequelize.define("Survey", {
         //Database fill for survey form
         TimeToBed: {
-            type: Datatypes.INTEGER,
+            type: Datatypes.INTEGER
+        },
+        rested: {
+            type: Datatypes.STRING
+        },
+        TimeWokeUp: {
+            type: Datatypes.INTEGER
         }
 
     })

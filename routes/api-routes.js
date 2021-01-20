@@ -25,6 +25,11 @@ module.exports = function(app) {
         res.status(401).json(err);
       });
   });
+app.post("api/profile", function(req, res){
+  db.Profile.create({
+    age:req.body.age
+  })
+});
 
   // Route for logging user out
   app.get("/logout", function(req, res) {
@@ -47,5 +52,6 @@ module.exports = function(app) {
     }
   });
 
+  
 
 };
