@@ -36,17 +36,15 @@
     }
 </style>
 
-<body>
+
     <div>
         <nav class="navBar" role="navigation">
             <div class="nav-wrapper container">
-                <a id="logo-container" href="/" class="brand-logo"> Hypnos</a>
+                <a id="logo-container" href="#" class="brand-logo"> Hypnos</a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="./team.html">Team</a></li>
                     <li><a href="/logout">Logout</a></li>
                 </ul>
                 <ul id="nav-mobile" class="sidenav">
-                    <li><a href="./team.html">Team</a></li>
                     <li><a href="/logout">Logout</a></li>
                   </ul>
             
@@ -297,25 +295,13 @@
                             </ul>
                         </div>
                     </div>
+                    
                 </div>
             </div>
+       
 
-
-            <!-- <footer>
-    <div class="container">
-          <a class="color" href="./team.html">Made by Team Hypnos Copyright &copy; 2021</a>
-         <br><a class="color" href="http://materializecss.com">Framework by Materialize</a>
-    </div>
-</footer> -->
-
-
-
-
-
-
-
-            <!--JavaScript at end of body for optimized loading-->
             
+            <!--JavaScript at end of body for optimized loading-->
             <script src="https://code.jquery.com/jquery-3.5.1.js"
                 integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -324,9 +310,35 @@
                     $('.collapsible').collapsible();
                 });
 
+    console.log("hello")
+    var isNavOpen = false;
+
+    $("body").on("click", function (event) {
+        console.log(event.target.classList[0])
+        if (true === isNavOpen && "material-icons" !== event.target.classList[0]) {
+            console.log(isNavOpen)
+            $("#nav-mobile").css("transform", "translateX(-105%)");
+        }
+    });
+    $(".sidenav-trigger").on("click", function () {
+        console.log("hi")
+        $("#nav-mobile").css("transform", "translateX(0%)");
+        isNavOpen = true;
+
+    });
+
 
             </script>
-</body>
-​
 
+
+
+</div>
+</div>
+<footer>
+    <div class="container">
+        <a class="color" href="./team.html">Made by Team Hypnos Copyright &copy; 2021</a>
+        <br><a class="color" href="http://materializecss.com">Framework by Materialize</a>
+    </div>
+</footer>
+</div>
 </html>
