@@ -11,6 +11,8 @@ $(document).ready(function () {
             age: ageInput.val().trim()
             
           };
+          saveAge(profileData.age);
+          //!! function not working, supposed to make div dissapear
           function myFunction() {
             var x = document.getElementByClassName("age-selection-form");
             if (x.style.display === "none") {
@@ -20,17 +22,15 @@ $(document).ready(function () {
             }
           }
       
-          if (!profileData.age) {
-            return alert("Please submit an age to continue");
-          }
+          
       
           // If we have an email and password we run the saveAge function and hide the div
-          saveAge(profileData.age);
+          
         //    code to hide the div blah blah blah put some code in to make it dissapear;
         });
       
         // saveAge does a post to our "api/profile" route and if successful, redirects us the the members page
-        function saveAge(age) {
+        function saveAge() {
           $.post("/api/profile", {
             age: age
           })
