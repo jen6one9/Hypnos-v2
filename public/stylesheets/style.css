@@ -349,9 +349,10 @@ nav .sidenav-trigger i {
     background-color: white;
 }
 
+.card-title
 .teamPick {
     margin-top: 6%;
-
+    line-height: 1%;
 }
 
 footer {
