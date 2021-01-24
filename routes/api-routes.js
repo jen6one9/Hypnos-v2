@@ -26,9 +26,10 @@ module.exports = function(app) {
       });
   });
   
+//route to save profile age from first question made by robert
 app.post("api/profile", function(req, res){
   db.Profile.create({
-    age:req.body.age
+    age: req.body.age
   })
 });
 
