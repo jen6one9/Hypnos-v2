@@ -16,7 +16,8 @@ module.exports = function(app) {
   app.post("/api/signup", function(req, res) {
     db.User.create({
       email: req.body.email,
-      password: req.body.password
+      password: req.body.password,
+      age:ageInput
     })
       .then(function() {
         res.redirect(307, "/api/login");
@@ -28,7 +29,7 @@ module.exports = function(app) {
   
 //route to save profile age from first question made by robert
 app.post("api/profile", function(req, res){
-  db.Profile.create({
+  db.User.create({
     age: req.body.age
   })
 });

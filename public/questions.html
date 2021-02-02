@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="./stylesheets/style.css">
     <!--<link rel= "stylesheet" href= "../public/stylesheets/materialize.css">-->
+    <script type="test/javascript" src="../public/js/survey.js"></script>
+
     <!-- icons link for materialize -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,44 +46,52 @@
                 </ul>
 
                 <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-        </div>
-        
-    </nav>
+            </div>
 
-    <section>
-        <div class="container">
-            <div class="row">
-           
-                <div class="col-md-7 main-section age-selection-form" id="link-box" >
-                   
-                    <form class="ageForm">
-                    <h5>Please select the range of your age</h5>
-                        <p><label>
-                            <input class="with-gap age" name="age" type="radio" value="9"/>
-                            <span>14 - 17 years</span>
-                        </label></p>
-                        <p><label>
-                              <input class="with-gap age" name="age" type="radio" value="8"/>
-                              <span>18 - 25 years</span>
-                        </label></p>
-                        <p><label>
-                            <input class="with-gap btn age" name="age" type="radio" value="7"/>
-                            <span>26 - 64 years</span>
-                      </label></p>
-                      <p><label>
-                        <input class="with-gap btn age" name="age" type="radio" value="6"/>
-                        <span>> 65 years</span>
-                     </label></p>
-                    <br>                 
+        </nav>
 
-                        <div class="row center">
-                            <button class="btn" type="submit">Submit</button>
-                            <script>console.log(form.input.val)</script>
-                        </div>
+        <section>
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-7 main-section age-selection-form" id="link-box">
+
+                        <form id="ageForm">
+                            <h5>Please select the range of your age</h5>
+                            <p><label>
+                                    <input name="age" type="radio" value="9" />
+                                    <span>14 - 17 years</span>
+                                </label></p>
+                            <p><label>
+                                    <input name="age" type="radio" value="8" />
+                                    <span>18 - 25 years</span>
+                                </label></p>
+                            <p><label>
+                                    <input name="age" type="radio" value="7" />
+                                    <span>26 - 64 years</span>
+                                </label></p>
+                            <p><label>
+                                    <input name="age" type="radio" value="6" />
+                                    <span>> 65 years</span>
+                                </label></p>
+                            <br>
+                            <div class="row center">
+                                <button class="btn" id=ageSubmitBtn type="submit" onclick="saveAge()">Submit</button>
+                                <script>
+                                    function saveAge() {
+                                        event.preventDefault();
+                                        var ageInput = document.querySelector('input[name="age"]:checked').value
+                                        console.log(ageInput) //prints out the selected age in the console
+                                    
+                                    }
+                                </script>
+
+                            </div>
                         </form>
 
+
                     </div>
-                
+
                 </div>
             </div>
 
@@ -193,31 +203,32 @@
 
         <!-- Javascript side NavBar-->
         <script>
-            console.log("hello")
-            var isNavOpen = false;
+                console.log("hello")
+                var isNavOpen = false;
 
-            $("body").on("click", function (event) {
-                console.log(event.target.classList[0])
-                if (true === isNavOpen && "material-icons" !== event.target.classList[0]) {
-                    console.log(isNavOpen)
-                    $("#nav-mobile").css("transform", "translateX(-105%)");
-                }
-            });
-            $(".sidenav-trigger").on("click", function () {
-                console.log("hi")
-                $("#nav-mobile").css("transform", "translateX(0%)");
-                isNavOpen = true;
 
-            });
+                $("body").on("click", function (event) {
+                    console.log(event.target.classList[0])
+                    if (true === isNavOpen && "material-icons" !== event.target.classList[0]) {
+                        console.log(isNavOpen)
+                        $("#nav-mobile").css("transform", "translateX(-105%)");
+                    }
+                });
+                $(".sidenav-trigger").on("click", function () {
+                    console.log("hi")
+                    $("#nav-mobile").css("transform", "translateX(0%)");
+                    isNavOpen = true;
+
+                });
         </script>
 
     </div>
 
 
     <!--  Scripts-->
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script type="test/javascript"src="js/profile.js"></script>
-  
+    <!-- <script type="test/javascript" src="js/survey.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script> -->
+
 
 
 </html>
