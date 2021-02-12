@@ -51,8 +51,7 @@
             <h5 style="text-align: center; color:white; font-family:Corgette">Sleep Tracker results</h5>
           </div>
           <div class="col s12 m4 l2" style="background-color: slategray;">
-            <img src="{{user.picture}}" alt="user photo">
-            <p class="flow-text" style="font-family: Righteous; color: white">{{user.displayName}}</p>
+            <p class="flow-text" style="font-family: Righteous; color: white">Welcome <span class="member-name"></span></p>
           </div>
           <div class="col s12 m4 l8" style="background-color: rgba(112, 128, 144, 0.603)">
             <canvas id="lineChart" height="1" width="3"></canvas>
@@ -86,7 +85,9 @@
     </div>
   </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="./js/results.js">
+    
   
   console.log("hello")
     var isNavOpen = false;

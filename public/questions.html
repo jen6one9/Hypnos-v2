@@ -78,11 +78,13 @@
                             <div class="row center">
                                 <button class="btn" id=ageSubmitBtn type="submit" onclick="saveAge()">Submit</button>
                                 <script>
-                                    function saveAge() {
+                                    function saveAge(age) {
                                         event.preventDefault();
                                         var ageInput = document.querySelector('input[name="age"]:checked').value
                                         console.log(ageInput) //prints out the selected age in the console
-                                    
+                                        $.post("/api/age",{
+                                            age:age
+                                        });
                                     }
                                 </script>
 

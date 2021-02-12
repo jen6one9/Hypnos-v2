@@ -17,7 +17,6 @@ module.exports = function(app) {
     db.User.create({
       email: req.body.email,
       password: req.body.password,
-      age:ageInput
     })
       .then(function() {
         res.redirect(307, "/api/login");
@@ -27,12 +26,12 @@ module.exports = function(app) {
       });
   });
   
-//route to save profile age from first question made by robert
-app.post("api/profile", function(req, res){
-  db.User.create({
-    age: req.body.age
-  })
-});
+// we need a route to save age from first question made.............................
+// app.update("/user_data/age", function(req, res){
+//   db.User.update({
+//     age:ageInput
+//   })
+// });
 
   // Route for logging user out
   app.get("/logout", function(req, res) {
