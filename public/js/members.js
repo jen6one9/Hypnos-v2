@@ -5,3 +5,6 @@ $(document).ready(function() {
     $(".member-name").text(data.email);
   });
 });
+
+
+//try and use strip or split to remove the email.

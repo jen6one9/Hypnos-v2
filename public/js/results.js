@@ -1,4 +1,11 @@
-// $.get("/api/sleep/user:")
+$(document).ready(function() {
+    // This file just does a GET request to figure out which user is logged in
+    // and updates the HTML on the page
+    $.get("/api/user_data").then(function(data) {
+      $(".member-name").text(data.email.split('@')[0]);
+    });
+  });
+
 var ctx = document.getElementById('lineChart').getContext('2d');
 var chart = new Chart(ctx, {
     // The type of chart
@@ -59,6 +66,10 @@ var chart = new Chart(ctx, {
     }
 });
 
+
+
+
+
 // sleepGoal() {
 //     var bedTime = getelementById("#test5");
 //     var awakeTime = getElementById("#test6");
@@ -75,18 +86,18 @@ var chart = new Chart(ctx, {
 //     chart.update();
 // }
 
-$(document).ready(function() {
-    // our initial sleeps array
-    const sleeps = [];
-    // getting sleeps from database when page loads
-    getSleeps();
-    // this function resets the sleeps displayed with new sleeps from the database
-    function initializeRows() {}
-    // This function grabs todos from the database and updates the view
-    function getSleeps() {
-        $.get('/api/sleeps', function(data) {
-            sleeps = data;
-            initializeRows();
-        });
-    }
-});
+// $(document).ready(function() {
+//     // our initial sleeps array
+//     const sleeps = [];
+//     // getting sleeps from database when page loads
+//     getSleeps();
+//     // this function resets the sleeps displayed with new sleeps from the database
+//     function initializeRows() {}
+//     // This function grabs todos from the database and updates the view
+//     function getSleeps() {
+//         $.get('/api/sleeps', function(data) {
+//             sleeps = data;
+//             initializeRows();
+//         });
+//     }
+// });
